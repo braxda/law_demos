@@ -4,9 +4,9 @@
 
 @layer base {
   :root {
-    --color-primary: 43 45 66; /* Rich navy blue */
-    --color-secondary: 141 153 174; /* Subtle blue-gray */
-    --color-accent: 239 35 60; /* Deep red accent */
+    --color-primary: 46 78 126; /* Rich blue */
+    --color-secondary: 97 129 182; /* Lighter blue */
+    --color-accent: 25 130 196; /* Bright blue accent */
     --color-neutral-50: 250 250 250;
     --color-neutral-100: 245 245 245;
     --color-neutral-200: 229 231 235;
@@ -59,7 +59,7 @@
   }
 
   .btn {
-    @apply inline-flex items-center justify-center rounded-none px-6 py-3 font-medium transition duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center rounded-md px-6 py-3 font-medium transition duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
   }
 
   .btn-primary {
@@ -91,11 +91,11 @@
   }
   
   .nav-link {
-    @apply relative text-neutral-800 hover:text-primary font-medium px-3 py-2 transition-colors after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full;
+    @apply relative font-medium px-3 py-2 transition-colors after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-current after:transition-all hover:after:w-full;
   }
 
   .nav-link-active {
-    @apply text-primary after:w-full;
+    @apply after:w-full;
   }
   
   .card {
@@ -125,106 +125,13 @@ body {
 }
 
 .law-accent {
-  @apply text-indigo-700;
+  @apply text-primary;
 }
 
 .law-btn {
-  @apply px-4 py-2 bg-indigo-700 text-white rounded hover:bg-indigo-800 transition-colors;
+  @apply px-4 py-2 bg-primary text-white rounded-md hover:bg-primary/90 transition-colors;
 }
 
 .law-btn-secondary {
-  @apply px-4 py-2 bg-gray-100 text-indigo-700 rounded hover:bg-gray-200 transition-colors;
-}
-
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
-/* Add any custom styles below */
-body {
-  @apply font-sans text-gray-800;
-}
-
-/* For links in the header with active state */
-.nav-link-active {
-  @apply text-purple-700 font-semibold;
-}
-
-/* For buttons with consistent styling */
-.btn-primary {
-  @apply bg-purple-800 text-white px-6 py-3 rounded hover:bg-purple-700 transition duration-200;
-}
-
-.btn-secondary {
-  @apply bg-white text-purple-900 px-6 py-3 rounded border border-purple-800 hover:bg-gray-50 transition duration-200;
-}
-
-/* Page sections with consistent spacing */
-.section {
-  @apply py-16;
+  @apply px-4 py-2 bg-gray-100 text-primary rounded-md hover:bg-gray-200 transition-colors;
 }

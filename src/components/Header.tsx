@@ -37,7 +37,7 @@ const Header = () => {
   }, [pathname]);
   
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md py-3' : 'bg-transparent py-5'}`}>
+    <header className={`fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-md py-3`}>
       <div className="container flex justify-between items-center">
         {/* Logo */}
         <Link 
@@ -54,7 +54,7 @@ const Header = () => {
               <li key={link.path}>
                 <Link 
                   to={link.path}
-                  className={`nav-link ${pathname === link.path ? 'nav-link-active' : ''}`}
+                  className={`nav-link ${pathname === link.path ? 'text-primary after:bg-primary after:w-full' : 'text-neutral-800 hover:text-primary after:bg-primary'}`}
                 >
                   {link.name}
                 </Link>
@@ -66,7 +66,7 @@ const Header = () => {
         {/* Contact button - hidden on mobile */}
         <div className="hidden md:flex items-center">
           <Button 
-            variant="outline" 
+            variant="outline"
             size="sm"
             href="tel:555-123-4567"
             icon={<PhoneIcon className="h-4 w-4" />}
@@ -78,7 +78,7 @@ const Header = () => {
         
         {/* Mobile menu button */}
         <button 
-          className="md:hidden text-primary p-1"
+          className="md:hidden p-1 text-primary"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
         >
