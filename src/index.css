@@ -4,7 +4,7 @@
 
 /* Custom styles */
 body {
-  font-family: 'Inter', sans-serif;
+  @apply font-sans text-gray-800;
 }
 
 .law-accent {
@@ -86,4 +86,28 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* Add any custom styles below */
+body {
+  @apply font-sans text-gray-800;
+}
+
+/* For links in the header with active state */
+.nav-link-active {
+  @apply text-purple-700 font-semibold;
+}
+
+/* For buttons with consistent styling */
+.btn-primary {
+  @apply bg-purple-800 text-white px-6 py-3 rounded hover:bg-purple-700 transition duration-200;
+}
+
+.btn-secondary {
+  @apply bg-white text-purple-900 px-6 py-3 rounded border border-purple-800 hover:bg-gray-50 transition duration-200;
+}
+
+/* Page sections with consistent spacing */
+.section {
+  @apply py-16;
 }

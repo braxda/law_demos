@@ -1,3 +1,64 @@
+# The Probate House L.C. Website
+
+This is a demo law firm website built with React, TypeScript, and Tailwind CSS.
+
+## Features
+
+- Responsive design that looks great on all devices
+- Modern UI with smooth animations
+- Information about services, team members, and contact details
+- Contact form for potential clients to reach out
+
+## Pages
+
+1. **Home** - Landing page with hero section and service overview
+2. **About Us** - Information about the law firm
+3. **Our Team** - Profiles of the attorneys and staff
+4. **Our Services** - Details about the services offered
+5. **Contact** - Contact form and office information
+
+## Technology Stack
+
+- React 19
+- TypeScript
+- Tailwind CSS for styling
+- React Router for navigation
+- Vite for build tooling
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v16+)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Start the development server:
+   ```
+   npm run dev
+   ```
+4. Open your browser and navigate to `http://localhost:5173`
+
+## Build for Production
+
+To build the project for production, run:
+
+```
+npm run build
+```
+
+The built files will be in the `dist` directory.
+
+## License
+
+This project is for demonstration purposes only.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
