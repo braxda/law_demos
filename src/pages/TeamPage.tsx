@@ -1,92 +1,200 @@
-const TeamPage = () => {
-  // Team members data - in a real application, this might come from an API or CMS
-  const teamMembers = [
-    {
-      id: 1,
-      name: "Jennifer M. Johnson",
-      title: "Founding Partner",
-      bio: "Jennifer has over 20 years of experience in estate planning and probate law. She is certified as a Specialist in Estate Planning, Trust, and Probate Law by the State Bar of California Board of Legal Specialization.",
-      education: "J.D., UCLA School of Law",
-      image: "/placeholder-female.jpg" // Placeholder for now
-    },
-    {
-      id: 2,
-      name: "Michael R. Davis",
-      title: "Senior Attorney",
-      bio: "Michael specializes in complex probate litigation and has successfully represented clients in numerous high-profile cases. His strategic approach to resolving disputes has earned him recognition among his peers.",
-      education: "J.D., USC Gould School of Law",
-      image: "/placeholder-male.jpg" // Placeholder for now
-    },
-    {
-      id: 3,
-      name: "Sophia L. Martinez",
-      title: "Estate Planning Attorney",
-      bio: "Sophia focuses on helping families create comprehensive estate plans that protect their assets and provide for their loved ones. She is known for her ability to explain complex legal concepts in simple terms.",
-      education: "J.D., Stanford Law School",
-      image: "/placeholder-female.jpg" // Placeholder for now
-    },
-    {
-      id: 4,
-      name: "Robert K. Wilson",
-      title: "Probate Attorney",
-      bio: "Robert has extensive experience guiding clients through the probate process. His attention to detail and thorough approach ensures that estates are administered properly and efficiently.",
-      education: "J.D., Berkeley Law",
-      image: "/placeholder-male.jpg" // Placeholder for now
-    }
-  ];
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Section } from '../components/ui/Section';
+import { AnimatedElement } from '../components/ui/AnimatedElement';
+import { CallToActionSection } from '../components/sections/CallToActionSection';
 
+// Team member data
+const teamMembers = [
+  {
+    id: 1,
+    name: 'Jonathan Barrington',
+    role: 'Founding Partner',
+    image: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+    bio: 'Jonathan brings over 30 years of experience in estate law, having founded Barrington Legal in 1998. He specializes in complex estate planning and high-value probate cases.',
+    education: ['J.D., Harvard Law School', 'B.A., Yale University'],
+    barAdmissions: ['Massachusetts Bar Association', 'American Bar Association'],
+    awards: ['Best Lawyers in America (2010-2023)', 'Massachusetts Super Lawyer']
+  },
+  {
+    id: 2,
+    name: 'Sarah Mitchell',
+    role: 'Senior Partner',
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80',
+    bio: 'Sarah joined Barrington Legal in 2003 and became partner in 2008. She focuses on estate planning for business owners and trust administration, bringing clarity to complex situations.',
+    education: ['J.D., Boston University School of Law', 'B.S., Boston College'],
+    barAdmissions: ['Massachusetts Bar Association', 'New York Bar Association'],
+    awards: ['Top Women Attorneys in Massachusetts', 'Best Lawyers in America (2015-2023)']
+  },
+  {
+    id: 3,
+    name: 'Michael Reynolds',
+    role: 'Partner',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+    bio: 'Michael specializes in estate litigation and contested probate matters. With his background as a former prosecutor, he brings strategic insight and strong advocacy to complex disputes.',
+    education: ['J.D., Columbia Law School', 'B.A., Georgetown University'],
+    barAdmissions: ['Massachusetts Bar Association', 'Federal Bar Association'],
+    awards: ['Massachusetts Super Lawyer', 'Top 100 Trial Lawyers in Massachusetts']
+  },
+  {
+    id: 4,
+    name: 'Emma Lawson',
+    role: 'Associate',
+    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1961&q=80',
+    bio: 'Emma joined Barrington Legal in 2018 and focuses on estate planning for young families and digital asset planning. She brings a modern perspective to traditional estate planning.',
+    education: ['J.D., Northeastern University School of Law', 'B.A., Tufts University'],
+    barAdmissions: ['Massachusetts Bar Association'],
+    awards: ['Rising Star, Massachusetts Super Lawyers (2020-2023)']
+  }
+];
+
+const TeamPage = () => {
+  const [selectedMember, setSelectedMember] = useState(teamMembers[0]);
+  
   return (
     <div>
-      {/* Page Header */}
-      <div className="bg-purple-900 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold mb-4">Our Team</h1>
-          <p className="text-xl max-w-3xl mx-auto">
-            Meet our experienced team of attorneys dedicated to providing exceptional 
-            legal services in probate and estate planning.
-          </p>
+      {/* Hero Section */}
+      <div className="relative py-20 md:py-24 bg-primary overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-20">
+          <div 
+            className="h-full w-full bg-cover bg-center"
+            style={{ 
+              backgroundImage: `url(https://images.unsplash.com/photo-1593115057322-e94b77572f20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80)`,
+              filter: 'grayscale(100%)'
+            }}
+          ></div>
+        </div>
+        <div className="container relative z-10">
+          <div className="max-w-3xl mx-auto text-center text-white">
+            <AnimatedElement animation="fadeIn" className="mb-4">
+              <span className="inline-block text-accent uppercase tracking-wider font-medium">Our Team</span>
+            </AnimatedElement>
+            <AnimatedElement animation="slideUp" delay={0.2}>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
+                Meet Our Attorneys
+              </h1>
+            </AnimatedElement>
+            <AnimatedElement animation="slideUp" delay={0.3}>
+              <p className="text-xl text-white/80">
+                Our experienced attorneys bring unmatched expertise and a client-centered approach
+                to every case we handle.
+              </p>
+            </AnimatedElement>
+          </div>
         </div>
       </div>
       
-      {/* Team Members Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {teamMembers.map((member) => (
-              <div key={member.id} className="bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row">
-                <div className="md:w-1/3 mb-4 md:mb-0">
-                  <div className="bg-gray-300 h-48 w-48 mx-auto rounded-full mb-4"></div>
+      {/* Team Introduction */}
+      <Section>
+        <AnimatedElement animation="fadeIn">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-primary">Expertise You Can Trust</h2>
+            <p className="text-lg text-neutral-700 mb-10">
+              At Barrington Legal, our team combines deep legal knowledge, strategic thinking, and a commitment to personalized service.
+              Each attorney brings specialized expertise and a shared dedication to protecting our clients' interests and securing their legacies.
+            </p>
+          </div>
+        </AnimatedElement>
+        
+        {/* Team Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+          {teamMembers.map((member, index) => (
+            <AnimatedElement key={member.id} animation="slideUp" delay={0.1 * (index + 1)}>
+              <div 
+                className={`
+                  overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl cursor-pointer
+                  ${selectedMember.id === member.id ? 'ring-4 ring-primary ring-offset-4' : ''}
+                `}
+                onClick={() => setSelectedMember(member)}
+              >
+                <div className="relative h-80 bg-neutral-200">
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="w-full h-full object-cover object-center"
+                  />
                 </div>
-                <div className="md:w-2/3 md:pl-6">
-                  <h3 className="text-2xl font-bold text-purple-900">{member.name}</h3>
-                  <p className="text-blue-500 font-medium mb-3">{member.title}</p>
-                  <p className="text-gray-700 mb-3">{member.bio}</p>
-                  <p className="text-gray-600 italic">{member.education}</p>
+                <div className="p-6 bg-white">
+                  <h3 className="text-xl font-bold text-primary">{member.name}</h3>
+                  <p className="text-neutral-600">{member.role}</p>
                 </div>
               </div>
-            ))}
-          </div>
+            </AnimatedElement>
+          ))}
         </div>
-      </section>
+      </Section>
       
-      {/* Join Our Team Section */}
-      <section className="py-16 bg-gray-100">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 text-purple-900">Join Our Team</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            We're always looking for talented attorneys and legal professionals who are passionate 
-            about helping clients with their estate planning and probate needs.
-          </p>
-          <a 
-            href="/contact" 
-            className="inline-block bg-purple-800 text-white font-medium px-8 py-3 rounded-lg hover:bg-purple-700"
-          >
-            Contact Us About Careers
-          </a>
+      {/* Selected Member Details */}
+      <Section background="light">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+          <AnimatedElement animation="slideInLeft" className="lg:col-span-1">
+            <div className="sticky top-24">
+              <div className="relative overflow-hidden shadow-xl mb-6">
+                <img 
+                  src={selectedMember.image} 
+                  alt={selectedMember.name}
+                  className="w-full h-auto"
+                />
+              </div>
+              <h2 className="text-3xl font-heading font-bold text-primary">{selectedMember.name}</h2>
+              <p className="text-lg text-neutral-600 mb-6">{selectedMember.role}</p>
+              
+              <div className="space-y-1 text-neutral-600">
+                {selectedMember.education.map((edu, index) => (
+                  <p key={index}>• {edu}</p>
+                ))}
+              </div>
+            </div>
+          </AnimatedElement>
+          
+          <AnimatedElement animation="slideInRight" className="lg:col-span-2">
+            <div className="bg-white p-8 shadow-lg border-t-4 border-primary">
+              <h3 className="text-2xl font-heading font-bold mb-6 text-primary border-b border-neutral-200 pb-4">
+                About {selectedMember.name}
+              </h3>
+              
+              <p className="text-lg text-neutral-700 mb-8 leading-relaxed">
+                {selectedMember.bio}
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="text-lg font-bold text-primary mb-4">Bar Admissions</h4>
+                  <ul className="space-y-2 text-neutral-700">
+                    {selectedMember.barAdmissions.map((admission, index) => (
+                      <li key={index} className="flex items-center">
+                        <span className="h-1.5 w-1.5 rounded-full bg-accent mr-3"></span>
+                        {admission}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="text-lg font-bold text-primary mb-4">Recognition</h4>
+                  <ul className="space-y-2 text-neutral-700">
+                    {selectedMember.awards.map((award, index) => (
+                      <li key={index} className="flex items-center">
+                        <span className="h-1.5 w-1.5 rounded-full bg-accent mr-3"></span>
+                        {award}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </AnimatedElement>
         </div>
-      </section>
+      </Section>
+      
+      {/* Call to Action */}
+      <CallToActionSection
+        title="Work With Our Expert Team"
+        subtitle="Schedule a consultation to discuss your estate planning or probate needs with our experienced attorneys."
+        buttonText="Schedule a Consultation"
+      />
     </div>
-  )
-}
+  );
+};
 
-export default TeamPage 
+export default TeamPage; 

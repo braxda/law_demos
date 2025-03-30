@@ -1,4 +1,4 @@
-# The Probate House L.C. Website
+# Law Firm Group Website
 
 This is a demo law firm website built with React, TypeScript, and Tailwind CSS.
 
