@@ -121,9 +121,9 @@ const ContactPage = () => {
                   <div>
                     <h3 className="font-medium mb-1">Office Location</h3>
                     <p className="text-white/80">
-                      123 Legal Avenue<br />
+                      206 Washington Street<br />
                       Suite 400<br />
-                      Boston, MA 02110
+                      Boston, MA 02109
                     </p>
                   </div>
                 </div>
@@ -256,11 +256,47 @@ const ContactPage = () => {
       </Section>
       
       {/* Map Section */}
-      <Section fullWidth={true} className="pt-0">
-        <div className="h-[400px] w-full bg-neutral-200">
-          {/* Replace with actual Google Maps embed in production */}
-          <div className="w-full h-full flex items-center justify-center bg-neutral-300">
-            <p className="text-neutral-600 font-medium">Interactive Map Would Be Embedded Here</p>
+      <Section fullWidth={false} className="pt-0">
+        <div className="max-w-4xl mx-auto">
+          <div className="h-[400px] w-full relative rounded-lg overflow-hidden shadow-lg border border-neutral-200">
+            {/* Google Map */}
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.3319397615944!2d-71.05965492346008!3d42.35826427118593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3708377d5e337%3A0x7b38f1b738d406e0!2s206%20Washington%20St%2C%20Boston%2C%20MA%2002109!5e0!3m2!1sen!2sus!4v1698765432112!5m2!1sen!2sus"
+              width="100%" 
+              height="120%" 
+              style={{ border: 0, marginBottom: "-80px" }} 
+              allowFullScreen={false} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Office Location"
+              className="absolute inset-0"
+            ></iframe>
+            <div className="absolute bottom-0 left-0 right-0 bg-white/80 py-2 px-4 backdrop-blur-sm" style={{ height: "auto", maxHeight: "80px" }}>
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                <div>
+                  <h3 className="font-medium text-primary text-base">Our Office</h3>
+                  <p className="text-neutral-700 text-sm">206 Washington St, Suite 400, Boston, MA 02109</p>
+                </div>
+                <div className="flex gap-2">
+                  <a 
+                    href="https://www.google.com/maps/place/206+Washington+St,+Boston,+MA+02109"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-white text-primary border border-primary px-3 py-1 rounded text-xs font-medium hover:bg-primary/5 transition"
+                  >
+                    View Map
+                  </a>
+                  <a 
+                    href="https://www.google.com/maps/dir//206+Washington+St,+Boston,+MA+02109"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-primary text-white px-3 py-1 rounded text-xs font-medium hover:bg-primary/90 transition"
+                  >
+                    Get Directions
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </Section>

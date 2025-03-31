@@ -87,7 +87,7 @@
   }
 
   .section-subtitle {
-    @apply text-xl text-secondary mb-12 max-w-3xl;
+    @apply text-xl text-secondary mb-12 max-w-3xl mx-auto;
   }
   
   .nav-link {

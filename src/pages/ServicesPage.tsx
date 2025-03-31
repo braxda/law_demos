@@ -11,7 +11,9 @@ const ServicesPage = () => {
         "Creditor notification and debt settlement",
         "Tax filings",
         "Final distribution of assets"
-      ]
+      ],
+      imageUrl: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Legal documents and gavel representing probate process"
     },
     {
       id: 2,
@@ -23,7 +25,9 @@ const ServicesPage = () => {
         "Healthcare directives",
         "Asset protection strategies",
         "Business succession planning"
-      ]
+      ],
+      imageUrl: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Person signing estate planning documents"
     },
     {
       id: 3,
@@ -35,7 +39,9 @@ const ServicesPage = () => {
         "Beneficiary communication",
         "Tax planning and compliance",
         "Trust accounting"
-      ]
+      ],
+      imageUrl: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Trust documents and financial planning materials"
     },
     {
       id: 4,
@@ -47,7 +53,9 @@ const ServicesPage = () => {
         "Court reporting and accounting",
         "Caregiver guidance",
         "Decision-making authority"
-      ]
+      ],
+      imageUrl: "https://images.unsplash.com/photo-1516733968668-dbdce39c4651?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      imageAlt: "Hands holding together representing care and guardianship"
     }
   ];
 
@@ -69,8 +77,14 @@ const ServicesPage = () => {
         <div className="container mx-auto px-4">
           {services.map((service, index) => (
             <div key={service.id} className={`flex flex-col md:flex-row ${index % 2 === 0 ? '' : 'md:flex-row-reverse'} mb-16`}>
-              {/* Image Placeholder - in a real site, you'd use actual images */}
-              <div className="md:w-1/3 bg-gray-200 h-64 mb-6 md:mb-0"></div>
+              {/* Service Image */}
+              <div className="md:w-1/3 mb-6 md:mb-0 overflow-hidden rounded-lg shadow-md h-64">
+                <img 
+                  src={service.imageUrl} 
+                  alt={service.imageAlt}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               
               <div className={`md:w-2/3 ${index % 2 === 0 ? 'md:pl-8' : 'md:pr-8'}`}>
                 <h2 className="text-3xl font-bold mb-4 text-primary">{service.title}</h2>

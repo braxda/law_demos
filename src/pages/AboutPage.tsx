@@ -82,7 +82,7 @@ const AboutPage = () => {
               For over two decades, we've guided thousands of clients through the complexities of estate planning, probate, and trust administration. Our attorneys combine deep legal expertise with compassionate service, ensuring that every client receives personalized attention.
             </p>
             <p className="text-neutral-700">
-              Today, our team of twelve attorneys and support staff continue our tradition of excellence, helping individuals and families protect their legacies for generations to come.
+              Today, our team of four attorneys and support staff continue our tradition of excellence, helping individuals and families protect their legacies for generations to come.
             </p>
           </AnimatedElement>
         </div>

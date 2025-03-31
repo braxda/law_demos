@@ -84,7 +84,7 @@ const HomePage = () => {
           </AnimatedElement>
           
           <AnimatedElement animation="fadeIn" delay={0.4} className="text-white">
-            <p className="text-5xl font-bold mb-2 text-accent">12</p>
+            <p className="text-5xl font-bold mb-2 text-accent">3</p>
             <p className="uppercase tracking-wider text-white/80">Award-Winning Attorneys</p>
           </AnimatedElement>
         </div>

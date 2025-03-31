@@ -10,7 +10,7 @@ const teamMembers = [
     id: 1,
     name: 'Jonathan Barrington',
     role: 'Founding Partner',
-    image: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80', // Unsplash image (License: https://unsplash.com/license)
+    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80', // Unsplash image (License: https://unsplash.com/license)
     bio: 'Jonathan brings over 30 years of experience in estate law, having founded Barrington Legal in 1998. He specializes in complex estate planning and high-value probate cases.',
     education: ['J.D., Harvard Law School', 'B.A., Yale University'],
     barAdmissions: ['Massachusetts Bar Association', 'American Bar Association'],
