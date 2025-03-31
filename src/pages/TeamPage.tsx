@@ -10,7 +10,7 @@ const teamMembers = [
     id: 1,
     name: 'Jonathan Barrington',
     role: 'Founding Partner',
-    image: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+    image: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80', // Unsplash image (License: https://unsplash.com/license)
     bio: 'Jonathan brings over 30 years of experience in estate law, having founded Barrington Legal in 1998. He specializes in complex estate planning and high-value probate cases.',
     education: ['J.D., Harvard Law School', 'B.A., Yale University'],
     barAdmissions: ['Massachusetts Bar Association', 'American Bar Association'],
@@ -20,7 +20,7 @@ const teamMembers = [
     id: 2,
     name: 'Sarah Mitchell',
     role: 'Senior Partner',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80',
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80', // Unsplash image (License: https://unsplash.com/license)
     bio: 'Sarah joined Barrington Legal in 2003 and became partner in 2008. She focuses on estate planning for business owners and trust administration, bringing clarity to complex situations.',
     education: ['J.D., Boston University School of Law', 'B.S., Boston College'],
     barAdmissions: ['Massachusetts Bar Association', 'New York Bar Association'],
@@ -30,7 +30,7 @@ const teamMembers = [
     id: 3,
     name: 'Michael Reynolds',
     role: 'Partner',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80', // Unsplash image (License: https://unsplash.com/license)
     bio: 'Michael specializes in estate litigation and contested probate matters. With his background as a former prosecutor, he brings strategic insight and strong advocacy to complex disputes.',
     education: ['J.D., Columbia Law School', 'B.A., Georgetown University'],
     barAdmissions: ['Massachusetts Bar Association', 'Federal Bar Association'],
@@ -40,7 +40,7 @@ const teamMembers = [
     id: 4,
     name: 'Emma Lawson',
     role: 'Associate',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1961&q=80',
+    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1961&q=80', // Unsplash image (License: https://unsplash.com/license)
     bio: 'Emma joined Barrington Legal in 2018 and focuses on estate planning for young families and digital asset planning. She brings a modern perspective to traditional estate planning.',
     education: ['J.D., Northeastern University School of Law', 'B.A., Tufts University'],
     barAdmissions: ['Massachusetts Bar Association'],
@@ -59,7 +59,7 @@ const TeamPage = () => {
           <div 
             className="h-full w-full bg-cover bg-center"
             style={{ 
-              backgroundImage: `url(https://images.unsplash.com/photo-1593115057322-e94b77572f20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80)`,
+              backgroundImage: `url(https://images.unsplash.com/photo-1593115057322-e94b77572f20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80)`, // Unsplash image (License: https://unsplash.com/license)
               filter: 'grayscale(100%)'
             }}
           ></div>

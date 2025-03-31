@@ -59,6 +59,8 @@ The built files will be in the `dist` directory.
 
 This project is for demonstration purposes only.
 
+See [ATTRIBUTION.md](./ATTRIBUTION.md) for a complete list of third-party libraries, frameworks, and resources used in this project, along with their respective licenses.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
